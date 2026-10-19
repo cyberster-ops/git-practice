@@ -41,6 +41,7 @@
 
     <button onclick="changeText()">Click me</button>
     <p id="counter">Clicks: 0</p>
+    <button onclick="toggleCard()">Hide/Show card</button>
 
     <script>
       let clicks = 0;
@@ -49,6 +50,15 @@
         clicks = clicks + 1;
         document.querySelector('#counter').textContent = 'Clicks: ' + clicks;
         document.querySelector('.intro').textContent = 'You clicked ' + clicks + ' time(s)';
+      }
+
+      function toggleCard() {
+        const card = document.querySelector('.card');
+        if (card.style.display === 'none') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
       }
     </script>
   </body>
