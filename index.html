@@ -39,6 +39,17 @@
       </ul>
     </div>
 
-    <button onclick="document.querySelector('.intro').textContent = 'Button clicked!'">Click me</button>
+    <button onclick="changeText()">Click me</button>
+    <p id="counter">Clicks: 0</p>
+
+    <script>
+      let clicks = 0;
+
+      function changeText() {
+        clicks = clicks + 1;
+        document.querySelector('#counter').textContent = 'Clicks: ' + clicks;
+        document.querySelector('.intro').textContent = 'You clicked ' + clicks + ' time(s)';
+      }
+    </script>
   </body>
 </html>
